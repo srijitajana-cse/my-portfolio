@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Srijita Jana — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Stars background -->
+  <div class="stars-container" aria-hidden="true">
+    <div class="stars" id="stars1"></div>
+    <div class="stars" id="stars2"></div>
+    <div class="stars" id="stars3"></div>
+  </div>
+
+  <!-- Aurora blobs -->
+  <div class="aurora" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>SJ<span class="logo-bracket">/&gt;</span>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+      <li>
+        <button class="theme-btn" id="themeToggle" aria-label="Toggle light mode">
+          <i class="fas fa-sun" id="themeIcon"></i>
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <main>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="home" aria-label="Introduction">
+      <div class="hero-content">
+        <div class="hero-eyebrow reveal">
+          <span class="eyebrow-dot"></span>
+          <span>Open to opportunities</span>
+        </div>
+
+        <h1 class="hero-name reveal">
+          <span class="name-line">Srijita</span>
+          <span class="name-line name-gradient">Jana</span>
+        </h1>
+
+        <p class="hero-tagline reveal">
+          <span class="typed-text" id="typedText"></span>
+          <span class="typed-cursor">|</span>
+        </p>
+
+        <p class="hero-bio reveal">
+          B.Tech CSE student at Haldia Institute of Technology, passionate about
+          <span class="accent-teal">Machine Learning</span>,
+          <span class="accent-violet">Cyber Security</span>, and
+          <span class="accent-rose">AI-driven solutions</span>.
+          Building things that matter.
+        </p>
+
+        <div class="hero-actions reveal">
+          <a href="Srijita_Resume__2_.pdf" download class="btn-primary">
+            <i class="fas fa-download"></i> Download Resume
+          </a>
+          <a href="#contact" class="btn-ghost">
+            Let's talk <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="hero-socials reveal">
+          <a href="mailto:srijitajanacs@gmail.com" class="social-pill" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.hackerrank.com/" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="HackerRank">
+            <i class="fab fa-hackerrank"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="orbit-ring ring-1">
+          <div class="orbit-icon" style="--angle:0deg"><i class="fab fa-python"></i></div>
+          <div class="orbit-icon" style="--angle:90deg"><i class="fas fa-brain"></i></div>
+          <div class="orbit-icon" style="--angle:180deg"><i class="fas fa-shield-halved"></i></div>
+          <div class="orbit-icon" style="--angle:270deg"><i class="fas fa-code"></i></div>
+        </div>
+        <div class="orbit-ring ring-2">
+          <div class="orbit-icon small" style="--angle:45deg"><i class="fas fa-robot"></i></div>
+          <div class="orbit-icon small" style="--angle:225deg"><i class="fas fa-database"></i></div>
+        </div>
+        <div class="hero-avatar-wrapper">
+          <div class="avatar-glow"></div>
+          <div class="avatar-initials">SJ</div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-indicator" aria-label="Scroll to About">
+        <i class="fas fa-chevron-down"></i>
+      </a>
+    </section>
+
+    <!-- ========== ABOUT SECTION ========== -->
+    <section class="section" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Who I am</span>
+          <h2 id="about-heading" class="section-title">About Me</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card glass-card reveal">
+            <div class="about-card-icon"><i class="fas fa-user-astronaut"></i></div>
+            <h3>The Person</h3>
+            <p>Hey! I'm Srijita Jana — a Computer Science engineering student from Contai, West Bengal. I thrive at the intersection of data, intelligence, and security.</p>
+            <p>In my own words: <em class="accent-teal">"The only way to do great work is to love what you do."</em></p>
+          </div>
+
+          <div class="about-card glass-card reveal" style="--delay: 0.1s">
+            <div class="about-card-icon"><i class="fas fa-crosshairs"></i></div>
+            <h3>The Focus</h3>
+            <p>My primary interest areas are <span class="accent-violet">Machine Learning & AI</span>, <span class="accent-rose">Cyber Security</span>, and <span class="accent-teal">Python Development</span>.</p>
+            <p>I love solving real-world problems through intelligent systems and secure code.</p>
+          </div>
+
+          <div class="about-card glass-card reveal" style="--delay: 0.2s">
+            <div class="about-card-icon"><i class="fas fa-seedling"></i></div>
+            <h3>Currently</h3>
+            <p>Building an <span class="accent-rose">AI Phishing Email Detector</span> using NLP and Flask. Always exploring new ML paradigms and security concepts.</p>
+            <p>CGPA: <strong class="accent-teal">8.128</strong> · 5th Semester · CSE</p>
+          </div>
+        </div>
+
+        <div class="stats-row reveal">
+          <div class="stat-item">
+            <span class="stat-number" data-target="4">0</span>
+            <span class="stat-label">Projects Built</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="8">0</span>
+            <span class="stat-label">Tech Skills</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="2">0</span>
+            <span class="stat-label">Internships</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="3">0</span>
+            <span class="stat-label">Years of Coding</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS SECTION ========== -->
+    <section class="section" id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">What I work with</span>
+          <h2 id="skills-heading" class="section-title">Skills</h2>
+        </div>
+
+        <div class="skills-categories">
+          <div class="skill-category reveal">
+            <h3 class="category-label"><i class="fas fa-code"></i> Languages</h3>
+            <div class="skill-pills">
+              <span class="skill-pill lang">Python</span>
+              <span class="skill-pill lang">C</span>
+              <span class="skill-pill lang">Java</span>
+              <span class="skill-pill lang">HTML/CSS</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal" style="--delay:0.1s">
+            <h3 class="category-label"><i class="fas fa-brain"></i> AI / ML / DL</h3>
+            <div class="skill-pills">
+              <span class="skill-pill ai">Machine Learning</span>
+              <span class="skill-pill ai">Deep Learning</span>
+              <span class="skill-pill ai">NLP</span>
+              <span class="skill-pill ai">GenAI</span>
+              <span class="skill-pill ai">Computer Vision</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal" style="--delay:0.2s">
+            <h3 class="category-label"><i class="fas fa-layer-group"></i> Libraries & Frameworks</h3>
+            <div class="skill-pills">
+              <span class="skill-pill lib">NumPy</span>
+              <span class="skill-pill lib">Pandas</span>
+              <span class="skill-pill lib">scikit-learn</span>
+              <span class="skill-pill lib">TensorFlow</span>
+              <span class="skill-pill lib">XGBoost</span>
+              <span class="skill-pill lib">Flask</span>
+              <span class="skill-pill lib">FastAPI</span>
+              <span class="skill-pill lib">Streamlit</span>
+              <span class="skill-pill lib">seaborn</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal" style="--delay:0.3s">
+            <h3 class="category-label"><i class="fas fa-database"></i> Databases</h3>
+            <div class="skill-pills">
+              <span class="skill-pill db">MySQL</span>
+              <span class="skill-pill db">MongoDB</span>
+              <span class="skill-pill db">PostgreSQL</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal" style="--delay:0.4s">
+            <h3 class="category-label"><i class="fas fa-shield-halved"></i> Security & Other</h3>
+            <div class="skill-pills">
+              <span class="skill-pill sec">Cyber Security</span>
+              <span class="skill-pill sec">Ethical Hacking</span>
+              <span class="skill-pill sec">DSA</span>
+              <span class="skill-pill sec">OOP</span>
+              <span class="skill-pill sec">Git/GitHub</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proficiency Bars -->
+        <div class="proficiency-section reveal">
+          <h3 class="proficiency-title">Core Proficiency</h3>
+          <div class="proficiency-bars">
+            <div class="prof-bar-item">
+              <div class="prof-bar-label">
+                <span>Python</span><span class="prof-pct">90%</span>
+              </div>
+              <div class="prof-bar-track">
+                <div class="prof-bar-fill" data-width="90" style="--bar-color: var(--teal)"></div>
+              </div>
+            </div>
+            <div class="prof-bar-item">
+              <div class="prof-bar-label">
+                <span>Machine Learning</span><span class="prof-pct">80%</span>
+              </div>
+              <div class="prof-bar-track">
+                <div class="prof-bar-fill" data-width="80" style="--bar-color: var(--violet)"></div>
+              </div>
+            </div>
+            <div class="prof-bar-item">
+              <div class="prof-bar-label">
+                <span>Cyber Security</span><span class="prof-pct">70%</span>
+              </div>
+              <div class="prof-bar-track">
+                <div class="prof-bar-fill" data-width="70" style="--bar-color: var(--rose)"></div>
+              </div>
+            </div>
+            <div class="prof-bar-item">
+              <div class="prof-bar-label">
+                <span>Deep Learning / NLP</span><span class="prof-pct">65%</span>
+              </div>
+              <div class="prof-bar-track">
+                <div class="prof-bar-fill" data-width="65" style="--bar-color: var(--teal)"></div>
+              </div>
+            </div>
+            <div class="prof-bar-item">
+              <div class="prof-bar-label">
+                <span>SQL & Databases</span><span class="prof-pct">75%</span>
+              </div>
+              <div class="prof-bar-track">
+                <div class="prof-bar-fill" data-width="75" style="--bar-color: var(--violet)"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EDUCATION SECTION ========== -->
+    <section class="section" id="education" aria-labelledby="education-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Academic journey</span>
+          <h2 id="education-heading" class="section-title">Education</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot teal"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3>B.Tech — Computer Science & Engineering</h3>
+                  <p class="timeline-org">Haldia Institute of Technology, Haldia</p>
+                </div>
+                <span class="timeline-badge">2023 – 2027</span>
+              </div>
+              <div class="timeline-meta">
+                <span class="meta-chip"><i class="fas fa-star"></i> CGPA: 8.128 (till 5th sem)</span>
+                <span class="meta-chip"><i class="fas fa-map-marker-alt"></i> West Bengal</span>
+              </div>
+              <p class="timeline-desc">Currently in my third year, focusing on AI/ML, data structures, computer networks, and cyber security. Active participant in technical communities.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal" style="--delay:0.15s">
+            <div class="timeline-dot violet"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3>Indian School Certificate (ISC)</h3>
+                  <p class="timeline-org">Contai Public School, Contai</p>
+                </div>
+                <span class="timeline-badge">2021 – 2023</span>
+              </div>
+              <div class="timeline-meta">
+                <span class="meta-chip"><i class="fas fa-percent"></i> 79.75%</span>
+                <span class="meta-chip"><i class="fas fa-book"></i> PCMB</span>
+              </div>
+              <p class="timeline-desc">Completed Class 12 with Physics, Chemistry, Mathematics, and Biology — building the analytical foundation for engineering.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal" style="--delay:0.3s">
+            <div class="timeline-dot rose"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3>Indian Certificate of Secondary Education (ICSE)</h3>
+                  <p class="timeline-org">Contai Public School, Contai</p>
+                </div>
+                <span class="timeline-badge">2021</span>
+              </div>
+              <div class="timeline-meta">
+                <span class="meta-chip"><i class="fas fa-percent"></i> 89.8%</span>
+              </div>
+              <p class="timeline-desc">Completed Class 10 with strong academic performance, establishing a robust base in science and mathematics.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EXPERIENCE SECTION ========== -->
+    <section class="section" id="experience" aria-labelledby="exp-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Where I've grown</span>
+          <h2 id="exp-heading" class="section-title">Experience & Training</h2>
+        </div>
+
+        <div class="exp-grid">
+          <div class="exp-card glass-card reveal">
+            <div class="exp-icon-wrap teal-glow">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="exp-content">
+              <div class="exp-header">
+                <div>
+                  <h3>Core Member</h3>
+                  <p class="exp-org">Computer Society of India (CSI)</p>
+                  <p class="exp-place">Haldia Institute of Technology</p>
+                </div>
+                <span class="exp-badge">Jul 2024 – Jul 2025</span>
+              </div>
+              <ul class="exp-list">
+                <li>Actively participated in organizing technical events and workshops.</li>
+                <li>Collaborated with team members to promote technical learning and student engagement.</li>
+              </ul>
+              <div class="exp-tags">
+                <span class="exp-tag">Event Management</span>
+                <span class="exp-tag">Community</span>
+                <span class="exp-tag">Leadership</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-card glass-card reveal" style="--delay:0.15s">
+            <div class="exp-icon-wrap violet-glow">
+              <i class="fas fa-shield-halved"></i>
+            </div>
+            <div class="exp-content">
+              <div class="exp-header">
+                <div>
+                  <h3>In-House Internship Training</h3>
+                  <p class="exp-org">Indian School of Ethical Hacking</p>
+                  <p class="exp-place">Advanced Python · ML · Cyber Security</p>
+                </div>
+                <span class="exp-badge">Jan 2026 – Feb 2026</span>
+              </div>
+              <ul class="exp-list">
+                <li>Trained in Machine Learning and basics of Deep Learning.</li>
+                <li>Gained foundational knowledge in Cyber Security and threat analysis.</li>
+              </ul>
+              <div class="exp-tags">
+                <span class="exp-tag">Python</span>
+                <span class="exp-tag">Machine Learning</span>
+                <span class="exp-tag">Cyber Security</span>
+                <span class="exp-tag">Ethical Hacking</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS SECTION ========== -->
+    <section class="section" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">What I've built</span>
+          <h2 id="projects-heading" class="section-title">Projects</h2>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Project 1 -->
+          <article class="project-card glass-card reveal" data-project="iris">
+            <div class="project-glow teal"></div>
+            <div class="project-header">
+              <div class="project-icon teal-icon">
+                <i class="fas fa-seedling"></i>
+              </div>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View live demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View on GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Iris Species Predictor</h3>
+            <p class="project-desc">Real-time Iris flower species detection using Logistic Regression. Deployed with Streamlit and Python Pickle for a seamless, interactive UI.</p>
+            <div class="project-stack">
+              <span class="stack-tag">Python</span>
+              <span class="stack-tag">scikit-learn</span>
+              <span class="stack-tag">Streamlit</span>
+              <span class="stack-tag">Pickle</span>
+            </div>
+            <span class="project-date"><i class="fas fa-calendar-alt"></i> January 2026</span>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card glass-card reveal" style="--delay:0.1s" data-project="realestate">
+            <div class="project-glow violet"></div>
+            <div class="project-header">
+              <div class="project-icon violet-icon">
+                <i class="fas fa-house-chimney"></i>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View on GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Real Estate Valuation Prediction</h3>
+            <p class="project-desc">Regression ML model predicting real estate prices from training and test datasets. Includes a comprehensive analysis report.</p>
+            <div class="project-stack">
+              <span class="stack-tag">Python</span>
+              <span class="stack-tag">Regression</span>
+              <span class="stack-tag">Pandas</span>
+              <span class="stack-tag">NumPy</span>
+            </div>
+            <span class="project-date"><i class="fas fa-calendar-alt"></i> February 2026</span>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card glass-card reveal featured-card" style="--delay:0.2s" data-project="phishing">
+            <div class="project-glow rose"></div>
+            <div class="featured-ribbon">In Progress</div>
+            <div class="project-header">
+              <div class="project-icon rose-icon">
+                <i class="fas fa-shield-halved"></i>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View on GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">AI Phishing Email Detector</h3>
+            <p class="project-desc">Intelligent NLP-based phishing email detection system using AI classification. REST API built with Flask and FastAPI. Currently in active development.</p>
+            <div class="project-stack">
+              <span class="stack-tag">Python</span>
+              <span class="stack-tag">NLP</span>
+              <span class="stack-tag">Flask</span>
+              <span class="stack-tag">FastAPI</span>
+              <span class="stack-tag">AI</span>
+            </div>
+            <span class="project-date"><i class="fas fa-calendar-alt"></i> April 2026 – Present</span>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card glass-card reveal" style="--delay:0.3s" data-project="personal">
+            <div class="project-glow teal"></div>
+            <div class="project-header">
+              <div class="project-icon teal-icon">
+                <i class="fas fa-cube"></i>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View on GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Personal Python Projects</h3>
+            <p class="project-desc">Collection of practical utilities: Face Detection with OpenCV/YOLO, QR Code Generator, and PDF Encryption using pikepdf.</p>
+            <div class="project-stack">
+              <span class="stack-tag">Python</span>
+              <span class="stack-tag">OpenCV</span>
+              <span class="stack-tag">YOLO</span>
+              <span class="stack-tag">pikepdf</span>
+            </div>
+            <span class="project-date"><i class="fas fa-calendar-alt"></i> 2024 – Present</span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CERTIFICATIONS SECTION ========== -->
+    <section class="section" id="certifications" aria-labelledby="cert-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Credentials</span>
+          <h2 id="cert-heading" class="section-title">Certifications</h2>
+        </div>
+        <div class="cert-grid">
+          <div class="cert-card glass-card reveal">
+            <div class="cert-icon teal-icon"><i class="fas fa-certificate"></i></div>
+            <div>
+              <h3>Advanced Python with ML & Cyber Security</h3>
+              <p class="cert-org">Indian School of Ethical Hacking</p>
+              <span class="cert-date">Jan – Feb 2026</span>
+            </div>
+          </div>
+          <div class="cert-card glass-card reveal" style="--delay:0.1s">
+            <div class="cert-icon violet-icon"><i class="fas fa-award"></i></div>
+            <div>
+              <h3>Problem Solving · Python · SQL</h3>
+              <p class="cert-org">HackerRank</p>
+              <span class="cert-date">2024 – Present</span>
+            </div>
+          </div>
+          <div class="cert-card glass-card reveal" style="--delay:0.2s">
+            <div class="cert-icon rose-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div>
+              <h3>CSI Technical Workshops</h3>
+              <p class="cert-org">Computer Society of India, HIT</p>
+              <span class="cert-date">2024 – 2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT SECTION ========== -->
+    <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Let's connect</span>
+          <h2 id="contact-heading" class="section-title">Get In Touch</h2>
+        </div>
+
+        <div class="contact-wrapper">
+          <div class="contact-info reveal">
+            <p class="contact-intro">Currently focused on <span class="accent-violet">Machine Learning</span> and <span class="accent-rose">Cyber Security</span>. Open to internships, projects, and collaborations.</p>
+
+            <div class="contact-cards">
+              <a href="mailto:srijitajanacs@gmail.com" class="contact-card glass-card">
+                <div class="contact-card-icon teal-icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <span class="contact-label">Email</span>
+                  <span class="contact-value">srijitajanacs@gmail.com</span>
+                </div>
+              </a>
+              <a href="tel:+918629958722" class="contact-card glass-card">
+                <div class="contact-card-icon violet-icon"><i class="fas fa-phone"></i></div>
+                <div>
+                  <span class="contact-label">Phone</span>
+                  <span class="contact-value">+91 86299 58722</span>
+                </div>
+              </a>
+              <div class="contact-card glass-card">
+                <div class="contact-card-icon rose-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div>
+                  <span class="contact-label">Location</span>
+                  <span class="contact-value">Contai, West Bengal, India</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-socials">
+              <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i> LinkedIn
+              </a>
+              <a href="https://www.hackerrank.com/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="HackerRank">
+                <i class="fab fa-hackerrank"></i> HackerRank
+              </a>
+            </div>
+          </div>
+
+          <form class="contact-form glass-card reveal" id="contactForm" novalidate>
+            <h3>Send a Message</h3>
+
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="e.g. Riya Sharma" autocomplete="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Internship Opportunity / Collaboration" required />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary full-width">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+
+            <p class="form-note" id="formNote" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-bracket">&lt;</span>SJ<span class="logo-bracket">/&gt;</span>
+      </div>
+      <p class="footer-copy">Designed &amp; Developed by <span class="accent-teal">Srijita Jana</span> · 2026</p>
+      <div class="footer-socials">
+        <a href="mailto:srijitajanacs@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.hackerrank.com/" target="_blank" rel="noopener noreferrer" aria-label="HackerRank"><i class="fab fa-hackerrank"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
