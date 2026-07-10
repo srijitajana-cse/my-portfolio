@@ -1230,6 +1230,17 @@ body.light-mode .navbar.scrolled {
   gap: 20px;
 }
 
+.cert-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.cert-detail {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin: 5px 0 6px;
+}
+
 .cert-card {
   padding: 24px;
   display: flex;
@@ -1501,9 +1512,10 @@ body.light-mode .footer {
 
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
-  .about-grid   { grid-template-columns: 1fr 1fr; }
-  .exp-grid     { grid-template-columns: 1fr; }
-  .cert-grid    { grid-template-columns: 1fr 1fr; }
+  .about-grid        { grid-template-columns: 1fr 1fr; }
+  .exp-grid          { grid-template-columns: 1fr; }
+  .cert-grid         { grid-template-columns: 1fr 1fr; }
+  .cert-grid-4       { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 900px) {
@@ -1575,7 +1587,8 @@ body.light-mode .footer {
   .theme-btn { position: relative; z-index: 1100; }
 
   .about-grid  { grid-template-columns: 1fr; }
-  .cert-grid   { grid-template-columns: 1fr; }
+  .cert-grid,
+  .cert-grid-4 { grid-template-columns: 1fr; }
   .stats-row   { flex-direction: column; gap: 16px; }
   .stat-divider { width: 60px; height: 1px; }
 
