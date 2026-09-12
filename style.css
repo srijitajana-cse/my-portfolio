@@ -833,6 +833,10 @@ body.light-mode .navbar.scrolled {
 .skill-pill.lib    { background: rgba(244,63,142,0.08); border-color: rgba(244,63,142,0.2); color: var(--rose); }
 .skill-pill.db     { background: var(--teal-dim);   border-color: rgba(0,212,200,0.20);   color: #6EE7FF; }
 .skill-pill.sec    { background: var(--violet-dim);  border-color: rgba(139,92,246,0.20);  color: #C4B5FD; }
+.skill-pill.data   { background: rgba(244,63,142,0.08); border-color: rgba(244,63,142,0.2); color: #FB92B9; }
+.skill-pill.swe    { background: var(--teal-dim);   border-color: rgba(0,212,200,0.20);   color: var(--teal); }
+.skill-pill.tools  { background: rgba(255,255,255,0.06); border-color: var(--glass-border); color: var(--text-secondary); }
+.skill-pill.lang2  { background: var(--violet-dim); border-color: rgba(139,92,246,0.25);  color: var(--violet); }
 
 .skill-pill:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
 
